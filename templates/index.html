@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<h2 align="center">Series Tracker</h2>
+{% endblock %}
+
+
+{% block body %}
+
+        <table class="table table-bordered" align="center" >
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">TV Series</th>
+                <th scope="col">Date Added</th>
+                <th scope="col">Actions</th>
+            </tr>
+            </thead>
+            {% for task in tasks%}
+            <tr>
+                <td>{{task.content}}</td>
+                <td>{{task.date_created.date()}}</td>
+                <td>
+                    <a href="/delete/{{task.id}}">Delete</a>
+                </td>
+            </tr>
+            {%endfor%}
+        </table>
+        <form action="/" method="POST" align="center">
+            <div class="form-group">
+            <input type="text" name="content" id="content" class="form-control">
+            </div>
+            <div class="form-group">
+            <input type="submit" value="Add Series" class="btn bt btn-primary">
+            </div>
+        </form>
+{% endblock %}
