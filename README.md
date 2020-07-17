@@ -5,6 +5,11 @@
 <div align='center'><font size="6" color="#000000"><b> Series-Tracker </b></font></div>
 <hr>
 
+### About:
+- A simple web-app made using Flask.
+- This helps you to keep track of all the web-series you watch online.
+- It is still a work in progress and I am trying to add some new features.
+
 ### Requirements :
 
 - Click==7.0
